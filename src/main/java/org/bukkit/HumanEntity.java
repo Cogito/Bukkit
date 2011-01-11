@@ -49,6 +49,19 @@ public interface HumanEntity extends LivingEntity {
      * 
      * @param item the type of item to give.
      * @param amount the amount of item to give the player
+     * @param damage the amount of damage the item should have.
+     * 
+     * @return The amount of the item actually given to the player.
+     * 
+     * @see ItemStack
+     */
+    public int giveItem(Material item, int amount, byte damage);
+    
+    /**
+     * Gives the player an amount of some item.
+     * 
+     * @param item the type of item to give.
+     * @param amount the amount of item to give the player
      * 
      * @return The amount of the item actually given to the player.
      */
@@ -62,6 +75,19 @@ public interface HumanEntity extends LivingEntity {
      * @return The amount of the item actually given to the player (0 or 1).
      */
     public int giveItem(Material item);
+    
+    /**
+     * Gives the player an amount of some item.
+     * 
+     * @param id the type ID of the item to give.
+     * @param amount the amount of item to give the player
+     * @param damage the amount of damage the item should have.
+     * 
+     * @return The amount of the item actually given to the player.
+     * 
+     * @see ItemStack
+     */
+    public int giveItem(int id, int amount, byte damage);
     
     /**
      * Gives the player an amount of some item.
