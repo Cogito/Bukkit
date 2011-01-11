@@ -63,23 +63,4 @@ public interface HumanEntity extends LivingEntity {
      * @return The amount of the item actually given to the player.
      */
     public int giveItem(int id, int amount);
-    
-    /**
-     * Gives the player a number of item stacks, all identical.
-     * 
-     * @param item the ItemStack to give to the player.
-     * @param number how many stacks to give.
-     * 
-     * @return the number of stacks actually given.
-     */
-    public int giveItemStack(ItemStack item, int number);
-    
-    /**
-     * Gives the player an ItemStack.
-     * 
-     * @param item the ItemStack to give the player.
-     * 
-     * @return the number of stacks actually given (0 or 1).
-     */
-    public int giveItemStack(ItemStack item);
 }
