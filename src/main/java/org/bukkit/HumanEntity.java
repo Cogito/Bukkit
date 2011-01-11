@@ -55,6 +55,15 @@ public interface HumanEntity extends LivingEntity {
     public int giveItem(Material item, int amount);
     
     /**
+     * Gives the player 1 of some item.
+     * 
+     * @param item the type of item to give.
+     * 
+     * @return The amount of the item actually given to the player (0 or 1).
+     */
+    public int giveItem(Material item);
+    
+    /**
      * Gives the player an amount of some item.
      * 
      * @param id the type ID of the item to give.
@@ -63,4 +72,13 @@ public interface HumanEntity extends LivingEntity {
      * @return The amount of the item actually given to the player.
      */
     public int giveItem(int id, int amount);
+    
+    /**
+     * Gives the player 1 of some item.
+     * 
+     * @param id the type ID of the item to give.
+     * 
+     * @return The amount of the item actually given to the player (0 or 1).
+     */
+    public int giveItem(int id);
 }
