@@ -43,4 +43,13 @@ public interface HumanEntity extends LivingEntity {
      * 
     public void selectItemInHand( int index );
     */
+    
+    /**
+     * Tries to give an ItemStack to the HumanEntity.
+     * 
+     * @param item the ItemStack to give to the HumanEntity
+     * 
+     * @return an ItemStack of leftover items not be given to the player.
+     */
+    public ItemStack giveItem(ItemStack item);
 }
