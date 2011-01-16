@@ -2,14 +2,14 @@ package org.bukkit.event.entity;
 
 import java.util.Random;
 
-import org.bukkit.Entity;
+import org.bukkit.entity.Entity;
 
-public class EntityDamagedByProjectileEvent extends EntityDamagedByEntityEvent {
+public class EntityDamageByProjectileEvent extends EntityDamageByEntityEvent {
     
     private Entity projectile;
     private boolean bounce;
 
-    public EntityDamagedByProjectileEvent(Entity damager, Entity damagee, 
+    public EntityDamageByProjectileEvent(Entity damager, Entity damagee, 
             Entity projectile, DamageCause cause, int damage) {
         super(damager, damagee, cause, damage);
         this.projectile = projectile;

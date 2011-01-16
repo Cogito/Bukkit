@@ -218,7 +218,7 @@ public final class JavaPluginLoader implements PluginLoader {
                     trueListener.onEntityDamageByEntity((EntityDamageByEntityEvent)event);
                     break;
                 case ENTITY_DAMAGEDBY_PROJECTILE:
-                    trueListener.onEntityDamageByProjectile((EntityDamagedByProjectileEvent)event);
+                    trueListener.onEntityDamageByProjectile((EntityDamageByProjectileEvent)event);
                     break;
                 case ENTITY_DEATH:
                     // TODO: ENTITY_DEATH hook
