@@ -143,8 +143,8 @@ public final class JavaPluginLoader implements PluginLoader {
                 case PLAYER_TELEPORT:
                     trueListener.onPlayerTeleport((PlayerMoveEvent)event);
                     break;
-                case PLAYER_ITEM:
-                    trueListener.onPlayerItem((PlayerItemEvent)event);
+                case PLAYER_USE_ITEM:
+                    trueListener.onPlayerUseItem((PlayerUseItemEvent)event);
                     break;
                 case PLAYER_LOGIN:
                     trueListener.onPlayerLogin((PlayerLoginEvent)event);

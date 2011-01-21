@@ -189,9 +189,16 @@ public abstract class Event {
         /**
          * Called when a player uses an item
          *
-         * @see org.bukkit.event.player.PlayerItemEvent
+         * @see org.bukkit.event.player.PlayerUseItemEvent
          */
-        PLAYER_ITEM (Category.PLAYER),
+        PLAYER_USE_ITEM (Category.PLAYER),
+        
+        /**
+         * Called when a player picks up an item
+         * 
+         * @see org.bukkit.event.player.PlayerPickUpItemEvent
+         */
+        PLAYER_PICKUP_ITEM (Category.PLAYER),
 
         /**
          * Called when a player throws an egg and it might hatch

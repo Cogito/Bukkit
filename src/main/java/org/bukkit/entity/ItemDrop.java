@@ -7,11 +7,13 @@ import org.bukkit.inventory.ItemStack;
  * 
  * @author sk89q
  */
+/**@deprecated*/
 public interface ItemDrop extends Entity {
     /**
      * Gets the item stack.
      * 
      * @return
      */
+    /**@deprecated*/
     public ItemStack getItemStack();
 }
