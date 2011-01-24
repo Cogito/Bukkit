@@ -281,7 +281,7 @@ public enum Material {
     }
 
     /**
-     * Checks if this Material is a placable block
+     * Checks if this Material is a place-able block
      *
      * @return true if this material is a block
      */
@@ -295,6 +295,12 @@ public enum Material {
 
     public static Material getMaterial(final String name) {
         return lookupName.get(name);
+    }
+    
+    public boolean equals(Material other){
+        return (other.getId() == this.getId()
+                && other.getData().equals(this.getData())
+                && other.getMaxStackSize() == this.getMaxStackSize());
     }
     
     static {

@@ -74,13 +74,6 @@ public interface Block {
     Material getType();
 
     /**
-     * Gets the type-id of this block
-     *
-     * @return block type-id
-     */
-    int getTypeId();
-    
-    /**
      * Gets the light level between 0-15
      * 
      * @return light level
@@ -143,14 +136,6 @@ public interface Block {
      * @param type Material to change this block to
      */
     void setType(Material type);
-
-    /**
-     * Sets the type-id of this block
-     *
-     * @param type Type-Id to change this block to
-     * @return whether the block was changed
-     */
-    boolean setTypeId(int type);
 
     /**
      * Gets the face relation of this block compared to the given block<br />

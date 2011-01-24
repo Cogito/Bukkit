@@ -1,6 +1,8 @@
 package org.bukkit.inventory;
 
 import java.util.HashMap;
+import java.util.Map;
+
 import org.bukkit.Material;
 
 /**
@@ -46,7 +48,7 @@ public interface Inventory {
      * @param items The ItemStacks to add
      * @return 
      */
-     public HashMap<Integer, ItemStack> addItem(ItemStack... items);
+     public Map<Integer, ItemStack> addItem(ItemStack... items);
 
     /**
      * Removes the given ItemStacks from the inventory.
@@ -57,7 +59,7 @@ public interface Inventory {
      * @param items The ItemStacks to remove
      * @return 
      */
-     public HashMap<Integer, ItemStack> removeItem(ItemStack... items);
+     public Map<Integer, ItemStack> removeItem(ItemStack... items);
 
     /**
      * Get all ItemStacks from the inventory
@@ -73,14 +75,6 @@ public interface Inventory {
      */
     public void setContents(ItemStack[] items);
 
-    /**
-     * Check if the inventory contains any ItemStacks with the given materialId
-     * 
-     * @param materialId The materialId to check for
-     * @return If any ItemStacks were found
-     */
-    public boolean contains(int materialId); 
-    
     /**
      * Check if the inventory contains any ItemStacks with the given material
      * 
@@ -99,12 +93,22 @@ public interface Inventory {
     public boolean contains(ItemStack item);
 
     /**
-     * Find all slots in the inventory containing any ItemStacks with the given materialId
+     * Check if the inventory contains any ItemStacks with the given material and at least the minimum amount specified
      * 
-     * @param materialId The materialId to look for
-     * @return The Slots found.
+     * @param material The material to check for
+     * @return If any ItemStacks were found
      */
-    public HashMap<Integer, ? extends ItemStack> all(int materialId); 
+    public boolean contains(Material material, int amount); 
+
+    /**
+     * Check if the inventory contains any ItemStacks that are similar to the given material
+     * 
+     * Precisely, this returns true if any other item stack has the same material id.
+     * 
+     * @param material The material to check for
+     * @return If any ItemStacks were found
+     */
+    public boolean containsSimilar(Material material); 
 
     /**
      * Find all slots in the inventory containing any ItemStacks with the given material
@@ -112,7 +116,7 @@ public interface Inventory {
      * @param materialId The material to look for
      * @return The Slots found.
      */
-    public HashMap<Integer, ? extends ItemStack> all(Material material); 
+    public Map<Integer, ? extends ItemStack> all(Material material); 
 
     /**
      * Find all slots in the inventory containing any ItemStacks with the given ItemStack
@@ -121,15 +125,7 @@ public interface Inventory {
      * @param item The ItemStack to match against
      * @return The Slots found.
      */
-    public HashMap<Integer, ? extends ItemStack> all(ItemStack item);
-
-    /**
-     * Find the first slot in the inventory containing an ItemStack with the given materialId
-     * 
-     * @param materialId The materialId to look for
-     * @return The Slot found.
-     */
-    public int first(int materialId);
+    public Map<Integer, ? extends ItemStack> all(ItemStack item);
 
     /**
      * Find the first slot in the inventory containing an ItemStack with the given material
@@ -138,6 +134,14 @@ public interface Inventory {
      * @return The Slot found.
      */
     public int first(Material material);
+    
+    /**
+     * Find the first slot in the inventory containing an ItemStack with the same id as material
+     * 
+     * @param materialId The material to look for
+     * @return The Slot found.
+     */
+    public int firstSimilar(Material material);
 
     /**
      * Find the first slot in the inventory containing an ItemStack with the given stack
@@ -154,13 +158,6 @@ public interface Inventory {
      * @return The first empty Slot found.
      */
     public int firstEmpty();
-
-    /**
-     * Remove all stacks in the inventory matching the given materialId.
-     * 
-     * @param materialId The material to remove
-     */
-    public void remove(int materialId);
 
     /**
      * Remove all stacks in the inventory matching the given material.
