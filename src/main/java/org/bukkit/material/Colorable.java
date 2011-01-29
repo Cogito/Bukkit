@@ -1,7 +1,5 @@
 package org.bukkit.material;
 
-import org.bukkit.DyeColor;
-
 /**
  * Represents a Material that can be colored
  */

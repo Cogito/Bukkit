@@ -1,9 +1,9 @@
-package org.bukkit;
+package org.bukkit.material;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public interface Material {
+public interface Material{
 
     /**
      * Return the Type of material that this Material represents.

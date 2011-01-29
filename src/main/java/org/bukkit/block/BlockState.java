@@ -2,8 +2,8 @@
 package org.bukkit.block;
 
 import org.bukkit.Chunk;
-import org.bukkit.Material;
 import org.bukkit.World;
+import org.bukkit.material.Material;
 
 /**
  * Represents a captured state of a block, which will not change automatically.

@@ -1,8 +1,8 @@
 package org.bukkit.event.block;
 
 import org.bukkit.block.Block;
-import org.bukkit.Material;
 import org.bukkit.event.Event;
+import org.bukkit.material.Material;
 
 /**
  * Thrown when a block physics check is called

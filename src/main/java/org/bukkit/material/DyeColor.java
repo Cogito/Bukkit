@@ -1,5 +1,5 @@
 
-package org.bukkit;
+package org.bukkit.material;
 
 import java.util.HashMap;
 import java.util.Map;

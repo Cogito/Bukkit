@@ -3,10 +3,10 @@ package org.bukkit;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.material.Material;
+import org.bukkit.plugin.PluginManager;
 
 import java.util.List;
-
-import org.bukkit.plugin.PluginManager;
 
 /**
  * Represents a server implementation

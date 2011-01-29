@@ -1,7 +1,7 @@
 
 package org.bukkit.inventory;
 
-import org.bukkit.Material;
+import org.bukkit.material.Material;
 
 /**
  * Represents a stack of items

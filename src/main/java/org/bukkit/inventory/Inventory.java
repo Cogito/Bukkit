@@ -2,7 +2,7 @@ package org.bukkit.inventory;
 
 import java.util.Map;
 
-import org.bukkit.Material;
+import org.bukkit.material.Material;
 
 /**
  * Interface to the various inventories
