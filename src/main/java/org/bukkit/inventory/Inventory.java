@@ -100,14 +100,6 @@ public interface Inventory {
     public boolean contains(ItemStack item);
 
     /**
-     * Find all slots in the inventory containing any ItemStacks with the given materialId
-     * 
-     * @param materialId The materialId to look for
-     * @return The Slots found.
-     */
-    public Map<Integer, ? extends ItemStack> all(int materialId); 
-
-    /**
      * Find all slots in the inventory containing any ItemStacks with the given material
      * 
      * @param materialId The material to look for
