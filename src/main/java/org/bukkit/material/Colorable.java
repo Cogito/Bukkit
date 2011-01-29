@@ -3,7 +3,7 @@ package org.bukkit.material;
 /**
  * Represents a Material that can be colored
  */
-public interface Colorable extends MaterialComplex{
+public interface Colorable{
 
     /**
      * Gets the current color of this dye

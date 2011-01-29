@@ -2,8 +2,6 @@
 package org.bukkit.block;
 
 import org.bukkit.Chunk;
-import org.bukkit.World;
-import org.bukkit.material.Material;
 
 /**
  * Represents a captured state of a block, which will not change automatically.
@@ -13,81 +11,7 @@ import org.bukkit.material.Material;
  * the state of the block and you will not know, or they may change the block to
  * another type entirely, causing your BlockState to become invalid.
  */
-public interface BlockState {
-    /**
-     * Gets the block represented by this BlockState
-     * 
-     * @return Block that this BlockState represents
-     */
-    Block getBlock();
-
-    /**
-     * Gets a Material with the same properties as this block.
-     * 
-     * This material can be manipulated (depending on its type) and then used to set
-     * the material of the block.
-     *
-     * @return a Material with the same properties as this block.
-     * 
-     * @see setMaterial()
-     */
-    Material getMaterial();
-
-    /**
-     * Gets the type-id of this block
-     *
-     * @return block type-id
-     */
-    int getTypeId();
-
-    /**
-     * Gets the light level between 0-15
-     *
-     * @return light level
-     */
-    byte getLightLevel();
-
-    /**
-     * Gets the world which contains this Block
-     *
-     * @return World containing this block
-     */
-    World getWorld();
-
-    /**
-     * Gets the x-coordinate of this block
-     *
-     * @return x-coordinate
-     */
-    int getX();
-
-    /**
-     * Gets the y-coordinate of this block
-     *
-     * @return y-coordinate
-     */
-    int getY();
-
-    /**
-     * Gets the z-coordinate of this block
-     *
-     * @return z-coordinate
-     */
-    int getZ();
-
-    /**
-     * Gets the chunk which contains this block
-     *
-     * @return Containing Chunk
-     */
-    Chunk getChunk();
-
-    /**
-     * Sets the type of this block
-     *
-     * @param type Material to change this block to
-     */
-    void setMaterial(Material material);
+public interface BlockState extends BlockAbstract {
 
     /**
      * Attempts to update the block represented by this state, setting it to the
@@ -118,4 +42,11 @@ public interface BlockState {
      * @return true if the update was successful, otherwise false
      */
     boolean update(boolean force);
+
+    /**
+     * Gets the block represented by this BlockState
+     * 
+     * @return Block that this BlockState represents
+     */
+    Block getBlock();
 }
