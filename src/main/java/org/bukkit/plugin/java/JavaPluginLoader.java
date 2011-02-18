@@ -460,6 +460,12 @@ public final class JavaPluginLoader implements PluginLoader {
                 for (String name : names) {
                     classes.remove(name);
                 }
+                
+                names = loader.getPackageNames();
+
+                for (String name : names) {
+                    packages.remove(name);
+                }
             }
         }
     }

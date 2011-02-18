@@ -79,4 +79,8 @@ public class PluginClassLoader extends URLClassLoader {
             return pkg;
         }
     }
+
+    public Set<String> getPackageNames() {
+        return packages.keySet();
+    }
 }
