@@ -37,6 +37,7 @@ public final class JavaPluginLoader implements PluginLoader {
             Pattern.compile("\\.jar$"),
     };
     private final Map<String, Class<?>> classes = new HashMap<String, Class<?>>();
+    private final Map<String, Package> packages = new HashMap<String, Package>();
 
     public JavaPluginLoader(Server instance) {
         server = instance;
@@ -112,6 +113,14 @@ public final class JavaPluginLoader implements PluginLoader {
 
     public void setClass(final String name, final Class<?> clazz) {
         classes.put(name, clazz);
+    }
+
+    public Package getPackageByName(final String name) {
+        return packages.get(name);
+    }
+
+    public void setPackage(final String name, final Package pkg) {
+        packages.put(name, pkg);
     }
 
     public EventExecutor createExecutor( Event.Type type, Listener listener ) {
