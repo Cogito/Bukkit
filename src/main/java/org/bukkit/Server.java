@@ -3,11 +3,14 @@ package org.bukkit;
 
 import com.avaje.ebean.config.ServerConfig;
 import org.bukkit.entity.Player;
+
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 import org.bukkit.command.PluginCommand;
 
 import org.bukkit.command.CommandSender;
+import org.bukkit.permission.PermissionProfile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.scheduler.BukkitScheduler;
 
@@ -194,4 +197,11 @@ public interface Server {
      * @param config ServerConfig to populate
      */
     public void configureDbConfig(ServerConfig config);
+
+    /**
+     * A Map of all loaded {@link PermissionProfile}.
+     * The keys are all the names of the loaded profiles.
+     * @return
+     */
+    public Map<String, PermissionProfile> getPermissionProfiles();
 }
